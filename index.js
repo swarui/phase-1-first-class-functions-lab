@@ -1,1 +1,26 @@
 // Code your solution in this file!
+function createFareMultiplier(number = 5) {
+  return function (fare = 60) {
+    return fare * number;
+  };
+}
+
+const fareDoubler = createFareMultiplier(2);
+
+const fareTripler = createFareMultiplier(3);
+
+const driversArray = ["Antonia", "Nuru", "Amari", "Mo"];
+const returnFirstTwoDrivers = function (driversArray) {
+  console.log(driversArray);
+  return [driversArray[0], driversArray[1]];
+};
+
+const returnLastTwoDrivers = function (driversArray) {
+  return driversArray.slice(-2);
+};
+
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
+
+const selectDifferentDrivers = function (driversArray, returnFirstTwoDrivers) {
+  return returnFirstTwoDrivers(driversArray);
+};
